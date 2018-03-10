@@ -24,19 +24,24 @@
             <div class='content'>
                 <div v-bind:class='{ hide: hide }' class='menu-content'>
                     <div class='inner-header'>
-                        <a v-on:click='hiding()' href="javascript: void(0);">
+                        <a v-on:click='hiding' href="javascript: void(0);">
                             <i class="fa fa-window-close" aria-hidden="true"></i>
                         </a>
                     </div>
                     <div class='inner'>
                         <label for="size">Size:</label>
-                        <input placeholder="1-10" min='1' max='10' type="number" id='size'>
+                        <input v-on:change='changingSize' placeholder="1-10" min='1' max='10' type="number" id='size' v-bind:value='size'>
                         <div class='controls'>
-                            <button v-on:click='hiding()' id='random'>Random</button>
-                            <button v-on:click='hiding()' id='restart'>Restart</button>
+                            <button v-on:click='hiding' id='random'>Random</button>
+                            <button v-on:click='saveSettings' v-on:click='hiding' id='restart'>Restart</button>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div>
+            <div class='content'>
+                <p>{{ size }}</p>
             </div>
         </div>
     </div>
