@@ -12,19 +12,19 @@
 </head>
 <body>
     <div id='body'>
-        <header>
+        <div class='header'>
             <div class='content'>
-                <a v-on:click='' id='menu' href='javascript: void(0);'>
+                <a v-on:click='hiding()' id='menu' href='javascript: void(0);'>
                     <i class="fa fa-bars" aria-hidden="true"></i>
                     Menu
                 </a>
             </div>
-        </header>
-        <main>
+        </div>
+        <div>
             <div class='content'>
                 <div v-bind:class='{ hide: hide }' class='menu-content'>
                     <div class='inner-header'>
-                        <a href="javascript: void(0);">
+                        <a v-on:click='hiding()' href="javascript: void(0);">
                             <i class="fa fa-window-close" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -32,13 +32,13 @@
                         <label for="size">Size:</label>
                         <input placeholder="1-10" min='1' max='10' type="number" id='size'>
                         <div class='controls'>
-                            <button id='random'>Random</button>
-                            <button id='restart'>Restart</button>
+                            <button v-on:click='hiding()' id='random'>Random</button>
+                            <button v-on:click='hiding()' id='restart'>Restart</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
     <main>
         

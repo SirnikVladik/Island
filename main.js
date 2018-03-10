@@ -8,6 +8,8 @@ new Vue({
         hide: 'true',
     },
     methods: {
-        
+        hiding() {
+            this.hide = !this.hide;
+        },
     },
 });

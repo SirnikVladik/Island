@@ -29,13 +29,13 @@ a {
     margin: 0 auto;
 }
 
-header {
+.header {
     font-size: 130%;
     box-shadow: 0 0 5px 0 black;
     background-color: #eee;
 }
 
-header > .content {
+.header > .content {
     padding: 2% 0;
 }
 
