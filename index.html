@@ -8,37 +8,41 @@
     <link rel="stylesheet" href="./styles/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Island</title>
+    <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-    <header>
-        <div class='content'>
-            <a href='javascript: void(0);'>
-                <i class="fa fa-bars" aria-hidden="true"></i>
-                Menu
-            </a>
-        </div>
-    </header>
-    <main>
-        <div class='content'>
-            <div class='menu-content'>
-                <div class='inner-header'>
-                    <a href="javascript: void(0);">
-                        <i class="fa fa-window-close" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <div class='inner'>
-                    <label for="size">Size:</label>
-                    <input placeholder="1-10" min='1' max='10' type="number" id='size'>
-                    <div class='controls'>
-                        <button id='random'>Random</button>
-                        <button id='restart'>Restart</button>
+    <div id='body'>
+        <header>
+            <div class='content'>
+                <a v-on:click='' id='menu' href='javascript: void(0);'>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    Menu
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class='content'>
+                <div v-bind:class='{ hide: hide }' class='menu-content'>
+                    <div class='inner-header'>
+                        <a href="javascript: void(0);">
+                            <i class="fa fa-window-close" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class='inner'>
+                        <label for="size">Size:</label>
+                        <input placeholder="1-10" min='1' max='10' type="number" id='size'>
+                        <div class='controls'>
+                            <button id='random'>Random</button>
+                            <button id='restart'>Restart</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
     <main>
         
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
