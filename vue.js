@@ -13,10 +13,11 @@ var bod = new Vue({
         sizeBefore: 3,
     },
     methods: {
-        hiding: function () {
+        hiding() {
             this.hide = !this.hide;
+            this.size = this.sizeBefore;
         },
-        changingSize: function (event) {
+        changingSize(event) {
             let val = Number(event.target.value);
             if (val < 1) {
                 val = String(1);
@@ -28,9 +29,16 @@ var bod = new Vue({
                 this.size = Number(event.target.value);
             }
         },
-        saveSettings: function (event) {
+        saveSettings(event) {
             this.sizeBefore = this.size;
             console.log(this.size);
-        }
+        },
+        randomSelection(event){
+            var s = this.size;
+            this.size = Math.floor(Math.random() * 10) + 1;
+            if(this.size == s) {
+                bod.randomSelection();
+            };
+        },
     },
 });

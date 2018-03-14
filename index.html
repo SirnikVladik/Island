@@ -32,8 +32,8 @@
                         <label for="size">Size:</label>
                         <input v-on:change='changingSize' placeholder="1-10" min='1' max='10' type="number" id='size' v-bind:value='size'>
                         <div class='controls'>
-                            <button v-on:click='hiding' id='random'>Random</button>
-                            <button id='restart'>Restart</button>
+                            <button a v-on:click='randomSelection(); saveSettings(); hiding()' id='random'>Random</button>
+                            <button a v-on:click='saveSettings() ; hiding();' id='restart'>Restart</button>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
         </div>
         <div class='game'>
             <div class='content'>
-                <p class='dimension'>{{ size }}x{{ size }}</p>
+                <p class='dimension'>{{ sizeBefore }}x{{ sizeBefore }}</p>
             </div>
         </div>
     </div>
@@ -49,6 +49,5 @@
         
     </main>
     <script src="vue.js"></script>
-    <script src="main.js"></script>
 </body>
 </html>
