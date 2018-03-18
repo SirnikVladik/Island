@@ -11,43 +11,49 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-    <div id='body'>
-        <div class='header'>
+    <div id='wrapper'>
+        <header>
             <div class='content'>
-                <a v-on:click='hiding()' id='menu' href='javascript: void(0);'>
+                <a @click='hiding()' id='menu' href='javascript: void(0);'>
                     <i class="fa fa-bars" aria-hidden="true"></i>
                     Menu
                 </a>
             </div>
-        </div>
-        <div>
+        </header>
+        <main>
             <div class='content'>
-                <div v-bind:class='{ hide: hide }' class='menu-content'>
+                <div :class='{ hide: hide }' class='menu-content'>
                     <div class='inner-header'>
-                        <a v-on:click='hiding' href="javascript: void(0);">
+                        <a @click='hiding' href="javascript: void(0);">
                             <i class="fa fa-window-close" aria-hidden="true"></i>
                         </a>
                     </div>
                     <div class='inner'>
                         <label for="size">Size:</label>
-                        <input v-on:change='changingSize' placeholder="1-10" min='1' max='10' type="number" id='size' v-bind:value='size'>
+                        <input @change='changingSize' placeholder="1-10" min='1' max='10' type="number" id='size' :value='size'>
                         <div class='controls'>
-                            <button a v-on:click='randomSelection(); saveSettings(); hiding()' id='random'>Random</button>
-                            <button a v-on:click='saveSettings() ; hiding();' id='restart'>Restart</button>
+                            <button a @click='randomSelection(); saveSettings(); hiding()' id='random'>Random</button>
+                            <button a @click='saveSettings(); hiding();' id='restart'>Restart</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class='game'>
+        </main>
+        <main class='game'>
             <div class='content'>
                 <p class='dimension'>{{ sizeBefore }}x{{ sizeBefore }}</p>
             </div>
-        </div>
+        </main>
+        <main>
+            <div class='content'>
+                <div id ="blocks">
+                    <div class="line" v-for="line in lines">
+                        <div  class="block" @click="changeMaterial" v-for="block in line" :class='{ sand:block, water: !block }'>{{ block }}</div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-    <main>
-        
-    </main>
     <script src="vue.js"></script>
 </body>
 </html>

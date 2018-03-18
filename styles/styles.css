@@ -30,13 +30,13 @@ a {
     margin: 0 auto;
 }
 
-.header {
+header {
     font-size: 130%;
     box-shadow: 0 0 5px 0 black;
     background-color: #eee;
 }
 
-.header > .content {
+header > .content {
     padding: 2% 0;
 }
 
@@ -122,4 +122,30 @@ a {
 .dimension {
     font-size: 150%;
     padding-top: 10px;
+}
+
+#blocks {
+    margin-top: 25px;
+    background-color: #0091ef;
+    text-align: center;
+    
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.block {
+    width:33.33%;
+    padding-top: 16.66%;
+    padding-bottom: 16.66%;
+}
+
+.water {
+    background-color: #0091ef;
+}
+
+.sand {
+    background-color: sandybrown;
 }
