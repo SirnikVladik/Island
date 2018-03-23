@@ -1,0 +1,82 @@
+@media screen and (orientation: portrait) and (min-width: 320px) {
+    .menu-content {
+        height: 220px;
+        top: 18%;
+    }
+
+    .menu-content > .inner {
+        margin: 35px auto;
+    }
+
+    
+    .controls > button {
+        height: 40px;
+        width: 80px;
+    }
+}
+
+@media screen and (orientation: portrait) and (min-width: 420px) {
+    body {
+        font-size: 22px;
+    }
+    
+    .menu-content {
+        height: 330px;
+        top: 15%;
+    }
+
+    .menu-content > .inner {
+        margin: 55px auto;
+    }
+
+    .controls {
+        padding-top: 110px;
+    }
+
+    .controls > button {
+        height: 50px;
+        width: 115px;
+    }
+}
+
+@media screen and (orientation: portrait) and (min-width: 720px) {
+    body {
+        font-size: 32px;
+    }
+    
+    .menu-content {
+        height: 430px;
+    }
+
+    .controls > button {
+        height: 80px;
+        width: 160px;
+    }
+
+    .controls {
+        padding-top: 155px;
+    }
+}
+
+@media screen and (orientation: portrait) and (min-width: 1280px) {
+    body {
+        font-size: 52px;
+    }
+    
+    .menu-content {
+        height: 900px;
+    }
+
+    .menu-content > .inner {
+        margin: 115px auto;
+    }
+
+    .controls > button {
+        height: 150px;
+        width: 300px;
+    }
+
+    .controls {
+        padding-top: 300px;
+    }
+}
