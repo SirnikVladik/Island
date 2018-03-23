@@ -30,10 +30,10 @@
                     </div>
                     <div class='inner'>
                         <label for="size">Size:</label>
-                        <input @change='changingSize' placeholder="1-10" min='1' max='10' type="number" id='size' :value='size'>
+                        <input @change='changingSize' placeholder="1-10" min='1' max='9' type="number" id='size' :value='size'>
                         <div class='controls'>
-                            <button a @click='randomSelection(); saveSettings(); hiding()' id='random'>Random</button>
-                            <button a @click='saveSettings(); hiding();' id='restart'>Restart</button>
+                            <button a @click='randomSelection(); hiding()' id='random'>Random</button>
+                            <button a @click='saveSettings(); hiding();' id='restart'>Save</button>
                         </div>
                     </div>
                 </div>
@@ -47,10 +47,19 @@
         <main>
             <div class='content'>
                 <div id ="blocks">
-                    <div class="line" v-for="line in lines">
-                        <div  class="block" @click="changeMaterial" v-for="block in line" :class='{ sand:block, water: !block }'>{{ block }}</div>
+                    <div class="line" v-for="(line,index) in lines">
+                        <div  class="block" @click="changeMaterial" v-for="(block,ind) in line" 
+                              :class='{ sand: block, water: !block }'
+                              :style="{ height: height }">
+                              <p class='inner-text'>{{ index+1 }}.{{ ind+1 }}</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </main>
+        <main>
+            <div class='content'>
+                <p id='islands'>Islands: {{ islands }}</p>
             </div>
         </main>
     </div>
