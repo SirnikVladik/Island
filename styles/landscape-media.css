@@ -1,0 +1,155 @@
+@media screen and (orientation: landscape) and (min-width: 320px) {
+    header > .content {
+        padding: 0;
+    }
+
+    .dimension {
+        padding-top: 0px;
+    }
+
+    #blocks {
+        margin: 0px auto;
+    }
+    
+    #blocks {
+        width: 40%;
+    }
+
+    .menu-content {
+        height: 165px;
+    }
+
+    .controls {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 480px) {
+    #blocks {
+        width: 60%;
+    }    
+}
+
+@media screen and (orientation: landscape) and (min-width: 560px) {
+    
+    #blocks {
+        width: 50%;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 720px) {
+    body {
+        font-size: 20px;
+    }
+
+    #blocks {
+        width: 40%;
+    }
+
+    header > .content {
+        padding: 0;
+    }
+    
+    .menu-content {
+        top: 18%;
+        height: 250px;
+    }
+
+    .menu-content > .inner {
+        margin: 25px auto;
+    }
+
+    
+
+    .controls {
+        padding-top: 85px;
+    }
+
+    .controls > button {
+        height: 47px;
+        width: 115px;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 960px) {
+    body {
+        font-size: 24px;
+    }
+    .menu-content {
+        top: 20%;
+        height: 325px;
+    }
+
+    .menu-content > .inner {
+        margin: 45px auto;
+    }
+
+    .controls {
+        padding-top: 100px;
+    }
+
+    .controls > button {
+        height: 65px;
+        width: 180px;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 960px) {
+    body {
+        font-size: 30px;
+    }
+
+    #blocks {
+        width: 50%;
+    }
+
+    .menu-content {
+        height: 440px;
+    }
+
+    .controls {
+        padding-top: 140px;
+    }
+
+    .controls > button {
+        height: 90px;
+        width: 210px;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1300px) {
+    #blocks {
+        width: 45%;
+    }
+}
+
+@media screen and (orientation: landscape) and (min-width: 2560px) {
+    body {
+        font-size: 52px;
+    }
+    
+    #blocks {
+        width: 55%;
+    }
+
+    header > .content {
+        padding: 1% 0;
+    }
+
+    .menu-content {
+        height: 1000px;
+    }
+
+    .menu-content > .inner {
+        margin: 140px auto;
+    }
+
+    .controls {
+        padding-top: 300px;
+    }
+
+    .controls > button {
+        height: 200px;
+        width: 420px;
+    }
+}
